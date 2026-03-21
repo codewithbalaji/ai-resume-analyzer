@@ -1,87 +1,76 @@
-# Welcome to React Router!
+# AI-Powered Applicant Tracking System (ATS)
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A modern, AI-powered Applicant Tracking System built to analyze and score resumes effortlessly. Powered by React Router 7, TailwindCSS, Puter.js for zero-backend AI and storage functionalities, and PDF.js for client-side processing.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🚀 Features
 
-## Features
+- **Client-Side PDF Parsing:** Upload PDF resumes and securely convert them into images entirely in the browser using `pdfjs-dist`.
+- **Drag & Drop Uploads:** Seamless file uploading experience powered by `react-dropzone`.
+- **AI Resume Analysis:** Leverages **Puter.js** AI capabilities (`puter.ai`) to analyze resume content, provide scoring, and extract key insights.
+- **Secure Storage & Authentication:** Out-of-the-box user authentication and cloud file storage via `puter.auth` and `puter.fs`.
+- **Modern UI:** Built using React 19, Tailwind CSS v4, and minimal dependencies for optimal performance.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🛠️ Tech Stack
 
-## Getting Started
+- **Framework:** [React Router v7](https://reactrouter.com/) (formerly Remix)
+- **UI & Styling:** [Tailwind CSS v4](https://tailwindcss.com/) + `clsx` & `tailwind-merge`
+- **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Backend & AI:** [Puter.js](https://docs.puter.com/)
+- **PDF Processing:** `pdfjs-dist`
+
+## 📁 Project Structure
+
+```text
+ai-resume-analyzer/
+├── app/
+│   ├── components/       # Reusable React components (ScoreBadges, Uploader, etc.)
+│   ├── constants/        # App-wide constants
+│   ├── lib/              # Utility functions and Puter.js / PDF integrations 
+│   ├── routes/           # React Router route definitions (Auth, Upload, Resume display)
+│   ├── root.tsx          # Root layout structure
+│   └── routes.ts         # Route configuration
+├── public/               # Public assets and PDF workers
+├── package.json
+└── vite.config.ts
+```
+
+## 💻 Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed globally.
 
 ### Installation
 
-Install the dependencies:
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd ai-resume-analyzer
+   ```
 
-```bash
-npm install
-```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Development
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-Start the development server with HMR:
+4. Open your browser and navigate to `http://localhost:5173`.
 
-```bash
-npm run dev
-```
+## 📜 Available Scripts
 
-Your application will be available at `http://localhost:5173`.
+- `npm run dev` - Starts the development server.
+- `npm run build` - Builds the app for production.
+- `npm run start` - Starts the production server locally.
+- `npm run typecheck` - Runs TypeScript type checking.
 
-## Building for Production
+## 🤝 Contributing
 
-Create a production build:
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](#) if you want to contribute.
 
-```bash
-npm run build
-```
+## 📝 License
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+This project is private and proprietary.
